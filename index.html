@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dorayaki Fun</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
 <div id="start-screen">
-    <img id="game-logo" src="/images/gameLogoWithClouds.png" alt="game-logo">
+    <img src="/images/gameLogoWithClouds.png" alt="" id="game-logo" />
+
     <h1><p>Instructions</p></h1>
     
-    <img id="left-right-arrows" src="/images/leftRightArrows.png" alt="left-right-arrows">
+    <img src="/images/leftRightArrows.png" alt="" id="left-right-arrows" />
+    
     <p>
     Press the <span class="bold">left</span> and <span class="bold">right</span> keys
     to move Doraemon.
@@ -21,7 +23,7 @@
     
     </p>
 
-    <img src="./images/dorayakiStartGame.png" alt="dorayaki-start">
+    <img src="./images/dorayakiStartGame.png" alt="" id="dorayaki-start" />
 </div>
 
 <!-- hidden, start-screen shows up first. will get hidden when game ends -->
@@ -38,7 +40,7 @@
 <!-- hidden, game-proper shows up first. will get hidden when game restarts-->
 <div id="end-screen">
     <h1><p>GAME OVER</p></h1>
-    <img src="./images/doraemonSmiling.png" alt="doraemon-smiling">
+    <img id="doraemon-smiling" src="./images/doraemonSmiling.png" alt="" />
     <!-- should grab the actual total points of the player -->
     <p>Total Points: <span id="total-points"> 0 </span></p>
 
@@ -49,7 +51,7 @@
     Press Restart Game for more DORAYAKI FUN!
     </p>
 
-    <img src="./images/dorayakiRestartGame.png" alt="dorayaki-restart">
+    <img id="dorayaki-restart" src="./images/dorayakiRestartGame.png" alt="dorayaki-restart" />
     </div>
 
 </div>

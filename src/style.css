@@ -9,22 +9,33 @@ body {
 }
 
 #game-logo {
-    max-width: 50px;
+    width: 1px;
 }
 
 #left-right-arrows {
-    width: 10px;
+    width: 1px;
 }
 
 #game-screen {
     display: none;
     background-image: url(../images/gameScreenBackground.jpg);
-    
+}
+
+#dorayaki-start {
+    width: 1px;
 }
 
 #end-screen {
     display: none;
     
+}
+
+#doraemon-smiling {
+    width: 10px;
+}
+
+#dorayaki-restart {
+    width: 20px;
 }
 
 /* .bold {
