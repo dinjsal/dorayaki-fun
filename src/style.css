@@ -1,0 +1,33 @@
+body {
+    background-color: #0CC0DF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    } 
+
+#start-screen {
+    display: flex;
+    justify-content: center;
+}
+
+#game-logo {
+    max-width: 50px;
+}
+
+#left-right-arrows {
+    width: 10px;
+}
+
+#game-screen {
+    display: none;
+    background-image: url(../images/gameScreenBackground.jpg);
+    
+}
+
+#end-screen {
+    display: none;
+    
+}
+
+/* .bold {
+    font-weight: bold;
+} */ 
+

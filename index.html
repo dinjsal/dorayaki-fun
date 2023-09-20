@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dorayaki Fun</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="start-screen">
+    <img id="game-logo" src="/images/gameLogoWithClouds.png" alt="game-logo">
+    <h1><p>Instructions</p></h1>
+    
+    <img id="left-right-arrows" src="/images/leftRightArrows.png" alt="left-right-arrows">
+    <p>
+    Press the <span class="bold">left</span> and <span class="bold">right</span> keys
+    to move Doraemon.
+    </p>
+    
+    <p>Hint: Avoid the clouds. Be careful of the archenemy!</p>
+    
+    </p>
+
+    <img src="./images/dorayakiStartGame.png" alt="dorayaki-start">
+</div>
+
+<!-- hidden, start-screen shows up first. will get hidden when game ends -->
+<div id="game-proper">
+    <div id="stats"> 
+        <p>Total Points: <span id="total-points"> 0 </span></p>
+        <p>Lives: <span id="lives"> 3 </span></p>
+    </div>
+    <div id="game-screen">
+
+    </div>
+</div>
+
+<!-- hidden, game-proper shows up first. will get hidden when game restarts-->
+<div id="end-screen">
+    <h1><p>GAME OVER</p></h1>
+    <img src="./images/doraemonSmiling.png" alt="doraemon-smiling">
+    <!-- should grab the actual total points of the player -->
+    <p>Total Points: <span id="total-points"> 0 </span></p>
+
+    <!-- should grab the actual total points of the player -->
+    <p>Lives: <span id="lives"> 3 </span></p>
+
+    <p>
+    Press Restart Game for more DORAYAKI FUN!
+    </p>
+
+    <img src="./images/dorayakiRestartGame.png" alt="dorayaki-restart">
+    </div>
+
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>
