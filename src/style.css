@@ -35,7 +35,7 @@ body {
 
 #game-screen {
     display: none;  
-    animation: color 8s ease infinite;
+    animation: color 5s ease-in-out infinite;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -62,7 +62,6 @@ body {
         background-image: url(../images/Starfall.jpg);
     }
 }
-
 
 #dorayaki-start {
     width: 90px;
