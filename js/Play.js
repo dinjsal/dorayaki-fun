@@ -11,6 +11,7 @@ class Play {
     this.height = 500;
     this.spaceship = new Spaceship(
       this.gameScreen,
+      400,
       100,
       100,
       "./images/doraemonPurpleSpaceship.png"
