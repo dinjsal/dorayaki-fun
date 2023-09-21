@@ -1,44 +1,58 @@
 body {
     background-color: #0CC0DF;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
     } 
 
 #start-screen {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 #game-logo {
-    width: 1px;
+    width: 375px;
 }
 
 #left-right-arrows {
-    width: 1px;
+    width: 70px;
+}
+
+.bold-underline {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#game-proper {
+    display: none;
+    align-content: center;
 }
 
 #game-screen {
-    display: none;
+    display: none;  
     background-image: url(../images/gameScreenBackground.jpg);
 }
 
 #dorayaki-start {
-    width: 1px;
+    width: 90px;
+    margin-bottom: 10px;
 }
 
 #end-screen {
     display: none;
-    
 }
 
 #doraemon-smiling {
-    width: 10px;
+    width: 100px;
 }
 
 #dorayaki-restart {
-    width: 20px;
+    width: 75px;
 }
 
-/* .bold {
-    font-weight: bold;
-} */ 
+ 
 
