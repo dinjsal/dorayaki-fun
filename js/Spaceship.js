@@ -1,9 +1,14 @@
 class Spaceship {
-  constructor(player, gameScreen) {
-    this.player = document.createElement("img");
+  constructor(gameScreen, width, height, spaceshipPhoto) {
     this.gameScreen = gameScreen;
+    this.width = width;
+    this.height = height;
+    this.spaceship = document.createElement("img");
 
-    this.player.src = "../images/doraemonPurpleSpaceship.png";
-    this.gameScreen.appendChild(this.player);
+    this.spaceship.src = spaceshipPhoto;
+    this.spaceship.style.width = `${this.width}px`;
+    this.spaceship.style.height = `${this.height}px`;
+
+    this.gameScreen.appendChild(this.spaceship);
   }
 }

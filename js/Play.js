@@ -9,6 +9,13 @@ class Play {
     this.endGame = false;
     this.width = 1000;
     this.height = 500;
+    this.spaceship = new Spaceship(
+      this.gameScreen,
+      100,
+      100,
+      "./images/doraemonPurpleSpaceship.png"
+    );
+    this.enemy = [];
 
     this.gameScreen.style.width = `${this.width}px`;
     this.gameScreen.style.height = `${this.height}px`;
