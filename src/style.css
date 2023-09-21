@@ -29,13 +29,40 @@ body {
 
 #game-proper {
     display: none;
-    align-content: center;
+    text-align: center;
+    font-weight: bold;
 }
 
 #game-screen {
     display: none;  
-    background-image: url(../images/gameScreenBackground.jpg);
+    animation: color 8s ease infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
 }
+
+@keyframes color {
+    0% {
+        background-image: url(../images/Pastel\ Orange\ at\ the\ Sun.jpg);
+    }
+    20% {
+        background-image: url(../images/Blurry\ Beach.jpg);
+    }
+    40% {
+        background-image: url(../images/Kyoto.jpg);
+    }
+    60% {
+        background-image: url(../images/The\ Strain.jpg);
+    }
+    80% {
+        background-image: url(../images/Shrimpy.jpg);
+    }
+    100% {
+        background-image: url(../images/Starfall.jpg);
+    }
+}
+
 
 #dorayaki-start {
     width: 90px;
