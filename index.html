@@ -16,10 +16,10 @@
     
     <p>
     Press the <span class="bold">left</span> and <span class="bold">right</span> keys
-    to move Doraemon.
+    to move Doraemon. Collect all the dorayaki!
     </p>
     
-    <p>Hint: Avoid the clouds. Be careful of the archenemy!</p>
+    <p>Hint: Be careful of the archenemy or you lose!</p>
     
     </p>
 
@@ -29,8 +29,7 @@
 <!-- hidden, start-screen shows up first. this will get hidden when game ends -->
 <div id="game-proper">
     <div id="stats"> 
-        <p>Total Points: <span id="total-points"> 0 </span></p>
-        <p>Lives: <span id="lives"> 3 </span></p>
+    <br><p>Total Points: <span id="total-points"> 0 </span></p>
     </div>
     <div id="game-screen">
 
@@ -39,16 +38,13 @@
 
 <!-- hidden, game-proper shows up first. this will get hidden when game restarts-->
 <div id="end-screen">
-    <h1><p>GAME OVER</p></h1>
+    <h1><p class="bold-underline" id="game-over">GAME OVER</p></h1>
     <img id="doraemon-smiling" src="./images/doraemonSmiling.png" alt="" />
     <!-- should grab the actual total points of the player -->
-    <p>Total Points: <span id="total-points"> 0 </span></p>
-
-    <!-- should grab the actual total points of the player -->
-    <p>Lives: <span id="lives"> 3 </span></p>
+    <p class="bold">Total Points: <span id="total-points"> 0 </span></p>
 
     <p>
-    Press Restart Game for more DORAYAKI FUN!
+    Press <span class="bold">Restart Game</span> for more DORAYAKI FUN!
     </p>
 
     <img id="dorayaki-restart" src="./images/dorayakiRestartGame.png" alt="dorayaki-restart" />

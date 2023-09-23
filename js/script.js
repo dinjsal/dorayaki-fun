@@ -15,15 +15,13 @@ window.addEventListener("load", () => {
   //keydown event
   window.addEventListener("keydown", (event) => {
     if (event.key === "ArrowLeft") {
-      play.spaceship.style = `${this.left}px`;
+      play.spaceship.directionX = -5;
     } else if (event.key === "ArrowRight") {
-      //fsdfdfsd
-    } else {
-      alert`Only left and right keys allowed!`;
+      play.spaceship.directionX = 5;
     }
   });
 
   dorayakiRestart.addEventListener("click", () => {
-    play.restartGame();
+    play.playAgain();
   });
 });

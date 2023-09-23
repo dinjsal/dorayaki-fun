@@ -1,19 +1,29 @@
 class Enemy {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.top = Math.floor(Math.random() * 100);
-    this.width = width;
-    this.height = height;
-    this.enemy = document.createElement("img");
-    this.directionX = 0;
+    this.left = Math.floor(Math.random() * 300 + 70);
+    this.top = 8;
+    this.width = 50;
+    this.height = 80;
+    this.mouse = document.createElement("img");
 
-    this.enemy.src = "./images/cloudWithBorder.png";
-    this.enemy.style.position = "relative";
+    this.mouse.src = "./images/mouse.png";
+    this.mouse.style.position = "absolute";
+    this.mouse.style.width = `${this.width}px`;
+    this.mouse.style.height = `${this.height}px`;
+    this.mouse.style.height = `${this.height}px`;
+    this.mouse.style.top = `${this.top}px`;
 
-    this.enemy.style.width = `${this.width}px`;
-    this.enemy.style.height = `${this.height}px`;
-    this.directionX = 0;
+    this.gameScreen.appendChild(this.mouse);
+  }
 
-    this.gameScreen.appendChild(this.enemy);
+  move() {
+    this.top += 8;
+    this.updatePosition();
+  }
+
+  updatePosition() {
+    this.mouse.style.left = `${this.left}px`;
+    this.mouse.style.top = `${this.top}px`;
   }
 }
