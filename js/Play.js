@@ -11,12 +11,14 @@ class Play {
     this.height = 500;
     this.spaceship = new Spaceship(
       this.gameScreen,
+      0,
       400,
       100,
       100,
       "./images/doraemonPurpleSpaceship.png"
     );
     this.enemy = [];
+    this.smilingDorayaki = [];
 
     this.gameScreen.style.width = `${this.width}px`;
     this.gameScreen.style.height = `${this.height}px`;
@@ -27,5 +29,22 @@ class Play {
     this.gameProper.style.display = "block";
     this.gameScreen.style.display = "block";
     this.endScreen.style.display = "none";
+  }
+
+  slideSideways() {
+    setInterval(() => {
+      this.spaceship.left++;
+      this.spaceship.style.left = `${this.left}px`;
+    }, 100);
+  }
+
+  //handle the size of the game-screen
+
+  appearEnemy() {}
+
+  appearSmilingDorayaki() {}
+
+  restartGame() {
+    location.reload;
   }
 }
