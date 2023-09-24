@@ -11,14 +11,13 @@ class SmilingDorayaki {
     this.smilingD.style.position = "absolute";
     this.smilingD.style.width = `${this.width}px`;
     this.smilingD.style.height = `${this.height}px`;
-    this.smilingD.style.height = `${this.height}px`;
     this.smilingD.style.top = `${this.top}px`;
 
     this.gameScreen.appendChild(this.smilingD);
   }
 
   move() {
-    this.top += 8;
+    this.top += 5;
     this.updatePosition();
   }
 

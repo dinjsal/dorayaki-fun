@@ -10,14 +10,16 @@ class Play {
     this.height = 500;
     this.spaceship = new Spaceship(
       this.gameScreen,
-      310,
-      400,
-      100,
-      100,
-      "./images/doraemonPurpleSpaceship.png"
+      330,
+      385,
+      70,
+      110,
+      "./images/doraemonSpaceship.png"
     );
     this.enemies = [];
     this.points = [];
+    this.endGameSound = new Audio("../audio/wonk-wonk-wonk-sound.mp3");
+    this.mouseSound = new Audio("../audio/mouse-6821.mp3");
   }
 
   gameStart() {
@@ -33,7 +35,7 @@ class Play {
   }
 
   continueGame() {
-    if (this.endGame) return;
+    if (this.endGame) return true;
     this.update();
     window.requestAnimationFrame(() => {
       this.continueGame();
@@ -43,33 +45,42 @@ class Play {
   update() {
     this.spaceship.move();
 
+    const score = document.querySelector("#score");
+
     for (let i = 0; i < this.enemies.length; i++) {
       const obstacle = this.enemies[i];
+
       obstacle.move();
 
       // If the player's car collides with an obstacle
       if (this.spaceship.touchWith(obstacle)) {
+        this.mouseSound.play();
         alert`You lose :(`;
         this.finishGame();
 
-        for (let j = 0; j < this.points.length; j++) {
-          const dorayaki = this.points[i];
-          dorayaki.move();
-
-          if (this.spaceship.touchWith(dorayaki)) {
-          }
-        }
-
+        // Increase the score by 1
+        this.score += Math.floor(Math.random() * 20);
+        ////score.innerText += Math.floor(Math.random() * 20);;
         // Remove the obstacle element from the DOM
         enemy.mouse.remove();
         // Remove obstacle object from the array
         this.enemies.splice(i, 1);
         // Update the counter variable to account for the removed obstacle
         i--;
+
+        for (let j = 0; j < this.points.length; j++) {
+          const dorayaki = this.points[i];
+          dorayaki.move();
+
+          if (this.spaceship.touchWith(dorayaki)) {
+            //code
+          }
+        }
       } // If the obstacle is off the screen (at the bottom)
       else if (obstacle.top > this.height) {
         // Increase the score by 1
-        this.score++;
+        this.score += Math.floor(Math.random() * 20);
+        //score.innerText += Math.floor(Math.random() * 20);; //grab this value at the end and display it on the screen
         // Remove the obstacle from the DOM
         obstacle.mouse.remove();
         // Remove obstacle object from the array
@@ -89,7 +100,7 @@ class Play {
   // Create a new method responsible for ending the game
   finishGame() {
     this.endGame = true;
-
+    this.endGameSound.play();
     // Hide game screen
     this.gameProper.style.display = "none";
     // Show end game screen

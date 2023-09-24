@@ -11,7 +11,7 @@ body {
 }
 
 #game-logo {
-    width: 375px;
+    width: 550px;
 }
 
 #left-right-arrows {
@@ -35,7 +35,7 @@ body {
 
 #game-screen {
     display: none;  
-    animation: color 4s ease-in-out infinite;
+    animation: color 45s ease-in-out infinite;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -44,28 +44,29 @@ body {
 
 @keyframes color {
     0% {
-        background-image: url(../images/Pastel\ Orange\ at\ the\ Sun.jpg);
+        background-image: url(../images/starrySky1.png);
+        background-size: cover;
     }
-    20% {
-        background-image: url(../images/Blurry\ Beach.jpg);
+    
+    50% {
+        background-image: url(../images/milky-way-2675323_640.jpg);
+        background-size: cover;
     }
-    40% {
-        background-image: url(../images/Kyoto.jpg);
+
+    75% {
+        background-image: url(../images/milky-way-5295160_1280.jpg);
+        background-size: cover;
     }
-    60% {
-        background-image: url(../images/The\ Strain.jpg);
-    }
-    80% {
-        background-image: url(../images/Shrimpy.jpg);
-    }
+
     100% {
-        background-image: url(../images/Starfall.jpg);
+        background-image: url(../images/milky-way-2675323_640.jpg);
+        background-size: cover;
     }
 }
 
 #dorayaki-start {
     width: 90px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 #end-screen {

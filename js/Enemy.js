@@ -7,10 +7,9 @@ class Enemy {
     this.height = 80;
     this.mouse = document.createElement("img");
 
-    this.mouse.src = "./images/mouse.png";
+    this.mouse.src = "./images/mousie.png";
     this.mouse.style.position = "absolute";
     this.mouse.style.width = `${this.width}px`;
-    this.mouse.style.height = `${this.height}px`;
     this.mouse.style.height = `${this.height}px`;
     this.mouse.style.top = `${this.top}px`;
 
@@ -18,7 +17,7 @@ class Enemy {
   }
 
   move() {
-    this.top += 8;
+    this.top += 4;
     this.updatePosition();
   }
 
