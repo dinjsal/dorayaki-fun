@@ -27,7 +27,6 @@ window.addEventListener("load", () => {
   });
 
   dorayakiRestart.addEventListener("click", () => {
-    bellSound.play(); //not playing :(
     play.playAgain();
   });
 });

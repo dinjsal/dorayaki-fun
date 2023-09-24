@@ -35,14 +35,17 @@ body {
 
 #game-screen {
     display: none;  
-    animation: color 45s ease-in-out infinite;
+    animation: galaxy 50s ease-in-out infinite;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -45%);
+    border-style: solid;
+    border-width: medium;
+    border-color: black;
 }
 
-@keyframes color {
+@keyframes galaxy {
     0% {
         background-image: url(../images/starrySky1.png);
         background-size: cover;
@@ -54,14 +57,14 @@ body {
     }
 
     75% {
-        background-image: url(../images/milky-way-5295160_1280.jpg);
+        background-image: url(../images/half-moon-4900302_1280.jpg);
         background-size: cover;
     }
 
     100% {
         background-image: url(../images/milky-way-2675323_640.jpg);
         background-size: cover;
-    }
+    }    
 }
 
 #dorayaki-start {
