@@ -1,8 +1,8 @@
 class SmilingDorayaki {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.left = Math.floor(Math.random() * 300 + 70);
-    this.top = 10;
+    this.left = Math.floor(Math.random() * 300 + 100);
+    this.top = 8;
     this.width = 50;
     this.height = 80;
     this.smilingD = document.createElement("img");

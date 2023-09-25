@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dorayaki Fun</title>
     <link rel="stylesheet" href="./src/style.css" />
+    <!-- was getting a 404 favicon in the console -->
+    <link rel="icon" href="data:," /> 
 </head>
 <body>
 <div id="start-screen">
@@ -26,7 +28,7 @@
     <img src="./images/dorayakiStartGame.png" alt="" id="dorayaki-start" />
 </div>
 
-<!-- hidden, start-screen shows up first. this will get hidden when game ends -->
+<!-- hidden, start-screen shows up first. this will get hidden when the game ends -->
 <div id="game-proper">
     <div id="stats"> 
     <br><p>Total Points: <span id="total-points"> 0 </span></p>
@@ -41,7 +43,7 @@
     <h1><p class="bold-underline" id="game-over">GAME OVER</p></h1>
     <img id="doraemon-smiling" src="./images/doraemonSmiling.png" alt="" />
     <!-- should grab the actual total points of the player -->
-    <p class="bold">Total Points: <span id="total-points"> 0 </span></p>
+    <p class="bold">Total Points: <span id="end-points"> 0 </span></p>
 
     <p>
     Press <span class="bold">Restart Game</span> for more DORAYAKI FUN!

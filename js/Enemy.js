@@ -1,8 +1,8 @@
 class Enemy {
   constructor(gameScreen) {
     this.gameScreen = gameScreen;
-    this.left = Math.floor(Math.random() * 300 + 70);
-    this.top = 8;
+    this.left = Math.floor(Math.random() * 300 + 100);
+    this.top = 5;
     this.width = 50;
     this.height = 80;
     this.mouse = document.createElement("img");
@@ -17,7 +17,8 @@ class Enemy {
   }
 
   move() {
-    this.top += 4;
+    this.top += 5;
+
     this.updatePosition();
   }
 
