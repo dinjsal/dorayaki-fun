@@ -52,43 +52,45 @@ class Play {
       const obstacle = this.enemies[i];
       obstacle.move();
 
-      if (this.spaceship.touchWith(obstacle)) {
-        this.mouseSound.play();
-        alert`You lose :(`;
-        this.finishGame();
-      } else if (obstacle.top > this.height - obstacle.height) {
+      if (obstacle.top > this.height - obstacle.height) {
         this.score += Math.floor(Math.random() * 20);
         score.innerText = this.score;
         obstacle.mouse.remove();
         this.enemies.splice(i, 1);
         i--;
+      } else if (this.spaceship.touchWith(obstacle)) {
+        this.mouseSound.play();
+        alert`You lose :(`;
+        this.finishGame();
       }
     }
 
     if (Math.random() > 0.95 && this.enemies.length < 1) {
       this.enemies.push(new Enemy(this.gameScreen));
     }
+    // do I nest this for loop? this block ain't workin'
+    // but on its own, it still doesn't work
 
-    //do I nest this for loop? this block ain't workin'
     for (let j = 0; j < this.points.length; j++) {
       const dorayaki = this.points[j];
       dorayaki.move();
 
       if (this.spaceship.touchWith(dorayaki)) {
+        this.score += 20;
+        score.innerText = this.score;
         this.dorayakiSound.play();
         dorayaki.smilingD.remove();
         this.points.splice(j, 1);
         j--;
-        this.score += 100;
-        score.innerText = this.score;
       } else if (dorayaki.top > this.height - dorayaki.height) {
         dorayaki.smilingD.remove();
         this.points.splice(j, 1);
         j--;
       }
-      if (Math.random() > 0.95 && this.points.length < 1) {
-        this.points.push(new SmilingDorayaki(this.gameScreen));
-      }
+    }
+
+    if (Math.random() > 0.95 && this.points.length < 1) {
+      this.points.push(new SmilingDorayaki(this.gameScreen));
     }
   }
 

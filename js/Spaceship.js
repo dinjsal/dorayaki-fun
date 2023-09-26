@@ -38,8 +38,14 @@ class Spaceship {
   }
 
   touchWith(enemy) {
+    console.log(enemy);
     const playerRect = this.spaceship.getBoundingClientRect();
-    const obstacleRect = enemy.mouse.getBoundingClientRect();
+    let obstacleRect;
+    if (enemy.mouse) {
+      obstacleRect = enemy.mouse.getBoundingClientRect();
+    } else {
+      obstacleRect = enemy.smilingD.getBoundingClientRect();
+    }
 
     if (
       playerRect.left < obstacleRect.right &&

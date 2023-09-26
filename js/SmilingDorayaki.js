@@ -4,7 +4,7 @@ class SmilingDorayaki {
     this.left = Math.floor(Math.random() * 300 + 100);
     this.top = 8;
     this.width = 50;
-    this.height = 80;
+    this.height = 40;
     this.smilingD = document.createElement("img");
 
     this.smilingD.src = "./images/smilingDorayaki.png";
@@ -17,7 +17,7 @@ class SmilingDorayaki {
   }
 
   move() {
-    this.top += 5;
+    this.top += 4;
     this.updatePosition();
   }
 
