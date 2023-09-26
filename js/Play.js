@@ -53,7 +53,7 @@ class Play {
       obstacle.move();
 
       if (obstacle.top > this.height - obstacle.height) {
-        this.score += Math.floor(Math.random() * 20);
+        this.score += Math.floor(Math.random() * 10);
         score.innerText = this.score;
         obstacle.mouse.remove();
         this.enemies.splice(i, 1);
@@ -74,7 +74,7 @@ class Play {
       dorayaki.move();
 
       if (this.spaceship.touchWith(dorayaki)) {
-        this.score += 20;
+        this.score += 10;
         score.innerText = this.score;
         this.dorayakiSound.play();
         dorayaki.smilingD.remove();
@@ -95,11 +95,20 @@ class Play {
   finishGame() {
     this.endGame = true;
     this.endGameSound.play();
-    localStorage.setItem("totalScore", this.score);
     const endTotalPoints = document.querySelector("#end-points");
-    const endScore = localStorage.getItem("totalScore", this.score);
+    endTotalPoints.innerText = this.score;
+
+    const endScore = localStorage.getItem("bestScore"); //oldHighScore
+
+    const bestScoreElement = document.querySelector("#best-score");
+
+    if (this.score > endScore) {
+      localStorage.setItem("bestScore", this.score);
+      bestScoreElement.innerText = this.score;
+    } else {
+      bestScoreElement.innerText = endScore;
+    }
     this.gameProper.style.display = "none";
-    endTotalPoints.innerText = endScore;
     this.endScreen.style.display = "block";
   }
 

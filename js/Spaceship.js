@@ -38,8 +38,7 @@ class Spaceship {
   }
 
   touchWith(enemy) {
-    console.log(enemy);
-    const doraemonPlayer = this.spaceship.getBoundingClientRect();
+    const doraemonPlayer = this.spaceship.getBoundingClientRect(); //rectangle
     let mouseDorayaki;
     if (enemy.mouse) {
       mouseDorayaki = enemy.mouse.getBoundingClientRect();
