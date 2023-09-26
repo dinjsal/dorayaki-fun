@@ -39,19 +39,19 @@ class Spaceship {
 
   touchWith(enemy) {
     console.log(enemy);
-    const playerRect = this.spaceship.getBoundingClientRect();
-    let obstacleRect;
+    const doraemonPlayer = this.spaceship.getBoundingClientRect();
+    let mouseDorayaki;
     if (enemy.mouse) {
-      obstacleRect = enemy.mouse.getBoundingClientRect();
+      mouseDorayaki = enemy.mouse.getBoundingClientRect();
     } else {
-      obstacleRect = enemy.smilingD.getBoundingClientRect();
+      mouseDorayaki = enemy.smilingD.getBoundingClientRect();
     }
 
     if (
-      playerRect.left < obstacleRect.right &&
-      playerRect.right > obstacleRect.left &&
-      playerRect.top < obstacleRect.bottom &&
-      playerRect.bottom > obstacleRect.top
+      doraemonPlayer.left < mouseDorayaki.right &&
+      doraemonPlayer.right > mouseDorayaki.left &&
+      doraemonPlayer.top < mouseDorayaki.bottom &&
+      doraemonPlayer.bottom > mouseDorayaki.top
     ) {
       return true;
     } else {

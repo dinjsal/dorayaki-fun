@@ -68,8 +68,6 @@ class Play {
     if (Math.random() > 0.95 && this.enemies.length < 1) {
       this.enemies.push(new Enemy(this.gameScreen));
     }
-    // do I nest this for loop? this block ain't workin'
-    // but on its own, it still doesn't work
 
     for (let j = 0; j < this.points.length; j++) {
       const dorayaki = this.points[j];
