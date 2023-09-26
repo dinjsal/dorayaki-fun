@@ -10,7 +10,7 @@ class Play {
     this.height = 500;
     this.spaceship = new Spaceship(
       this.gameScreen,
-      330,
+      320,
       385,
       70,
       110,
@@ -67,6 +67,28 @@ class Play {
 
     if (Math.random() > 0.95 && this.enemies.length < 1) {
       this.enemies.push(new Enemy(this.gameScreen));
+    }
+
+    //do I nest this for loop? this block ain't workin'
+    for (let j = 0; j < this.points.length; j++) {
+      const dorayaki = this.points[j];
+      dorayaki.move();
+
+      if (this.spaceship.touchWith(dorayaki)) {
+        this.dorayakiSound.play();
+        dorayaki.smilingD.remove();
+        this.points.splice(j, 1);
+        j--;
+        this.score += 100;
+        score.innerText = this.score;
+      } else if (dorayaki.top > this.height - dorayaki.height) {
+        dorayaki.smilingD.remove();
+        this.points.splice(j, 1);
+        j--;
+      }
+      if (Math.random() > 0.95 && this.points.length < 1) {
+        this.points.push(new SmilingDorayaki(this.gameScreen));
+      }
     }
   }
 

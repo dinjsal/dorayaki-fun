@@ -69,8 +69,8 @@ class Play {
       this.enemies.push(new Enemy(this.gameScreen));
     }
 
-    for (let j = 0; i < this.points.length; i++) {
-      const dorayaki = this.points[i];
+    for (let j = 0; j < this.points.length; j++) {
+      const dorayaki = this.points[j];
       dorayaki.move();
 
       if (this.spaceship.touchWith(dorayaki)) {

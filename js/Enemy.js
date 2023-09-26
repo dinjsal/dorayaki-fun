@@ -18,7 +18,6 @@ class Enemy {
 
   move() {
     this.top += 5;
-
     this.updatePosition();
   }
 
