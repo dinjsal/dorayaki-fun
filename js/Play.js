@@ -98,9 +98,9 @@ class Play {
     const endTotalPoints = document.querySelector("#end-points");
     endTotalPoints.innerText = this.score;
 
-    const endScore = localStorage.getItem("bestScore"); //oldHighScore
-
     const bestScoreElement = document.querySelector("#best-score");
+
+    const endScore = localStorage.getItem("bestScore");
 
     if (this.score > endScore) {
       localStorage.setItem("bestScore", this.score);
@@ -108,6 +108,7 @@ class Play {
     } else {
       bestScoreElement.innerText = endScore;
     }
+
     this.gameProper.style.display = "none";
     this.endScreen.style.display = "block";
   }

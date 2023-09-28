@@ -34,7 +34,6 @@ class Spaceship {
 
   updatePosition() {
     this.spaceship.style.left = `${this.left}px`;
-    this.spaceship.style.top = `${this.top}px`;
   }
 
   touchWith(enemy) {
